@@ -1,0 +1,49 @@
+:root {
+  --c-bg: #fffcf2;
+  --c-title: #252422;
+  --c-text: #403d39;
+  --c-link: #eb5e28;
+  --c-mark: rgba(#eb5e28,0.1);
+  --c-detail: #eeeade;
+  --f-family: PublicSans, sans-serif;
+  --f-size: 15px;
+  --f-height: 26px;
+  --f-weight: 400;
+  --f-scale-s: 0.8;
+  --f-scale-m: 1.25;
+  --f-scale-l: 1.563;
+  --f-scale-xl: 1.953;
+  --f-scale-xxl: 2.441;
+  font-size: var(--f-height);
+  font-family: var(--f-family);
+  font-weight: var(--f-weight);
+  background: var(--c-bg);
+  color: var(--c-text);
+}
+
+
+body {
+
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fffcf2;
+  width: 100%;
+  height: 100%;
+  font-size: var(--f-size);
+  line-height: var(--f-height);
+  font-weight: var(--f-weight);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  align-items: center;
+}
+
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
