@@ -69,7 +69,7 @@ const NewsletterSignup = () => {
   const [subscribed, setSubscribed] = useState(false);
 
 // Determine API endpoint based on environment
-  const apiEndpoint = process.env.NODE_ENV === 'development' ? 'http://localhost:8000' : 'https://newsletter-7k3k5ervl-arpan1908.vercel.app';
+  const apiEndpoint = process.env.NODE_ENV === 'development' ? 'http://localhost:8000' : 'https://newsletter-server-anbj.onrender.com';
 
   const subscribe = async () => {
     try {
