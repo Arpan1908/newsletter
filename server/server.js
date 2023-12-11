@@ -53,6 +53,8 @@
 //   console.log(`Server is running on port ${PORT}`);
 // });
 
+require('dotenv').config(); // Load environment variables from .env file
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const axios = require('axios');
@@ -70,21 +72,17 @@ app.use((req, res, next) => {
   next();
 });
 
-// Assuming you have a Mailchimp API key
-const MAILCHIMP_API_KEY = 'e9614309716cf256039939bc2124a288-us11';
-const MAILCHIMP_AUDIENCE_ID = 'fc5ae3e089';
-
 app.post('/subscribe', async (req, res) => {
   const { email } = req.body;
 
   try {
     const response = await axios.post(
-      `https://us11.api.mailchimp.com/3.0/lists/${MAILCHIMP_AUDIENCE_ID}/members`,
+      `https://us11.api.mailchimp.com/3.0/lists/${process.env.MAILCHIMP_AUDIENCE_ID}/members`,
       { email_address: email, status: 'subscribed' },
       {
         auth: {
           username: 'anystring',
-          password: MAILCHIMP_API_KEY,
+          password: process.env.MAILCHIMP_API_KEY,
         },
       }
     );
@@ -99,4 +97,3 @@ app.post('/subscribe', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
-
