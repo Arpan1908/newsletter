@@ -7,11 +7,11 @@ const NewsletterSignup = () => {
   const [subscribed, setSubscribed] = useState(false);
 
 // Determine API endpoint based on environment
-  const apiEndpoint = process.env.NODE_ENV === 'development' ? 'http://localhost:8000' : 'https://newsletter-server2.onrender.com';
+  //const apiEndpoint = process.env.NODE_ENV === 'development' ? 'http://localhost:8000' : 'https://newsletter-server2.onrender.com';
 
   const subscribe = async () => {
     try {
-      const response = await axios.post(`${apiEndpoint}/subscribe`, { email });
+      const response = await axios.post("https://newsletter-server2.onrender.com/subscribe", { email });
       if (response.data.success) {
         setSubscribed(true);
       } else {
