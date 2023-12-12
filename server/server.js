@@ -53,6 +53,24 @@
 //   console.log(`Server is running on port ${PORT}`);
 // });
 
+//app.post('/subscribe',async(req,res)=>{
+  //const email = req.body;
+
+  //try{
+    //const request = await mailChimpCLinet.userlist.add({
+      //email,
+    //});
+    //console.log(response);
+    //res.status(200).json({success:true,response})
+  //}
+//})
+
+
+
+
+
+
+
 require('dotenv').config(); // Load environment variables from .env file
 
 const express = require('express');
