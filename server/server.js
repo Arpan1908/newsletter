@@ -24,46 +24,7 @@
 
 
 
-// app.use(express.json());
-// app.post('/subscribe', async (req, res) => {
-//     const { email } = req.body;
-  
-//     try {
-//       const response = await mailchimpClient.allowlists.add({
-//         email,
-//       });
-  
-//       console.log(response);
-//       res.status(200).json({ success: true, response });
-//     } catch (error) {
-//       console.error('Error subscribing to allowlist:', error);
-  
-//       if (error.response && error.response.data && error.response.data.status === 'error') {
-//         // Handle specific errors
-//         if (error.response.data.name === 'Invalid_Key') {
-//           return res.status(401).json({ success: false, error: 'Invalid API key' });
-//         }
-//       }
-  
-//       res.status(500).json({ success: false, error: error.message });
-//     }
-//   });
 
-// app.listen(PORT, () => {
-//   console.log(`Server is running on port ${PORT}`);
-// });
-
-//app.post('/subscribe',async(req,res)=>{
-  //const email = req.body;
-
-  //try{
-    //const request = await mailChimpCLinet.userlist.add({
-      //email,
-    //});
-    //console.log(response);
-    //res.status(200).json({success:true,response})
-  //}
-//})
 
 
 
